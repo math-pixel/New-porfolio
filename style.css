@@ -340,7 +340,8 @@ a:hover::before{
     width: 25%;
     border-radius: 2vw;
 
-    border: white 2.5px solid;
+    border: #EC0868 1px solid;
+    box-shadow: 0px 0px 10px #EC0868;
     overflow: hidden;
 }
 
@@ -486,39 +487,60 @@ a:hover::before{
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
+/* qui suis je */
+
+
+.whoIam{
+    width: 100%;
+
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: center;
+    text-align: start;
+}
+
+.whoIam h2{
+    font-size: 2.5vw;
+
+}
+
+.whoIam p{
+    font-size: 1.5vw;
+}
 
 /* contactPage */
 
 .contactPage{
     height: 70vh;
     width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .containerContact{
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.whoIam{
-    height: 100%;
-    width: 30%;
-
-    margin-right: 20%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: inherit;
-    align-items: flex-end;
-    text-align: end;
-}
 
 .contactForm{
     height: 100%;
-    width: 30%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .SeparateContact{
@@ -528,12 +550,46 @@ a:hover::before{
 
 .contactForm form{
 
-    margin-left: 20%;
+    /* margin-left: 20%; */
+
+    height: 100%;
+    width: 30%;
+
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
-    text-align: start;
+
+    
+}
+
+form label{
+    font-size: 1vw;
+
+    margin-left: 2%;
+}
+
+
+.input{
+    height: 3vh;
+    width: 30vw;
+
+    border-radius: 15px;
+    border: 2px solid #ffbe0a91;
+    box-shadow: 0px 0px 10px #ffbe0aa1;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    margin: 10px;
+}
+
+.inputSubmit{
+
+    margin: 20px;
+    height: 2vh;
+    width: 5vw;
+
+    align-self: flex-end;
 }
