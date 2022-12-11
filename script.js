@@ -63,7 +63,7 @@ let button = [...ButtonElm];
 
 const contenu3D = [{titre:"Sabre CyberPunk", image: "https://math-pixel.github.io/portfolio/image/sbre%20cyberpunk.png", link:""},{titre:"Usine", image: "https://math-pixel.github.io/portfolio/image/usine%20rendu.png", link:""},{titre:"Sabre Deamon Slayer", image: "https://math-pixel.github.io/portfolio/image/rengoku%20sword1.png", link:""}, {titre:"Maison Japonaise", image: "https://math-pixel.github.io/portfolio/image/japon%20blender3.png", link:""}];
 
-const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.jpg", link:""},{titre:"Photographie", image: "./images/voiture.jpg", link:""}];
+const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.JPG", link:""},{titre:"Photographie", image: "./images/voiture.JPG", link:""}];
 
 const contenuCreation = [{titre:"3D Printer", image: "./images/3d printer.jpg", link:"a"},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
 
