@@ -1,14 +1,14 @@
 @font-face {
     font-family: "typo1";
-    src: url("./typo/Quesat Black Demo.otf");
+    src: url("./typo/Nexa Bold.otf");
 }
 @font-face {
     font-family: "typo2";
-    src: url("./typo/Behtix.otf");
+    src: url("./typo/GENUINE.ttf");
 }
 @font-face {
     font-family: "typo3";
-    src: url("./typo/Quesat Light Italic Demo.otf");
+    src: url("./typo/Nexa Light.otf");
 }
 
 @keyframes bg_move {
@@ -75,12 +75,13 @@ body{
 
     overflow-x: hidden;
 
-    font-family: "typo3";
+    font-family: "typo1";
 }
 
 h1{
     font-size: 3vw;
     text-align: center;
+    
 }
 
 hr{
@@ -90,13 +91,21 @@ hr{
 }
 
 .Titre{
-    
-    margin: 30px;
+    padding-top: 10vh;
+    /* margin: 30px; */
+    height: 10%;
 
     /* color: transparent; */
     background-clip: text;
     border-radius: 10px;
     box-shadow: none;
+
+    font-size: 4vw;
+}
+
+p{
+    font-family: "typo3";
+    letter-spacing: 1.5px;
 }
 
 /* ########################## */
@@ -128,7 +137,7 @@ header{
     width: auto;
     margin-left: 20px;
 }
-nav{
+li a{
     font-size: 1.5vw;
 }
 
@@ -209,7 +218,7 @@ li a{
 
 
 .animation_forward{
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.74);
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
     animation: bg_move 0.5s ease ;
     animation-fill-mode: forwards;
 }
@@ -423,12 +432,18 @@ a:hover::before{
 
 .Container{
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
     height: 90%;
-    width: 25%;
+    width: 33%;
     border-radius: 2vw;
 
     border: #EC0868 1px solid;
-    box-shadow: 0px 0px 10px #EC0868;
+    /* box-shadow: 0px 0px 10px #EC0868; */
     overflow: hidden;
 }
 
@@ -441,12 +456,43 @@ a:hover::before{
     height: 50%;
 }
 
+
+.more{
+
+    color: white;
+
+    border-radius: 5px;
+    border: 1px solid #EC0868 ;
+
+    background-color: #c02063;
+
+    width: 90px;
+    height: 30px;
+
+    transition: 0.2s all;
+    transform: scale(1);
+
+    box-shadow: none;
+}
+.more:hover{
+    box-shadow: 0px 0px 15px #EC0868;
+    transform: scale(1.1);
+    letter-spacing: 2.5px;
+}
+.more:active{
+    background-color: #830f40;
+}
+
 .right .ContainerDescription{
     align-items: flex-start;
 }
 
 .left .ContainerDescription{
     align-items: flex-end;
+}
+
+.left .textDescription{
+    text-align: right;
 }
 
 .backgroundContainer{
@@ -464,7 +510,7 @@ a:hover::before{
     left: 0;
 
 
-    height: 50%;
+    height: auto;
     width: 100%;
 
     border-radius: 0%;
@@ -477,17 +523,33 @@ a:hover::before{
 /* project */
 /* ############################### */
 
+.titre_project{
+    font-family: "typo2";
+    font-size: 2vw;
+
+    text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
 .Projet1{
     background-image: url("images/workshop1.png");   
 }
 
+.Projet2{
+    background-image: url("images/cache-cache.PNG");  
+    top: 32%;
+}
+
+.Projet3{
+    background-image: url("images/volet.png");  
+    top: 32%;
+}
 
 /* ######################## */
 /* Labs */
 /* ######################## */
 
 .labs{
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
 }
 
@@ -495,13 +557,15 @@ a:hover::before{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    height: auto;
 }
 
 .galeryNav{
 
     
-
+    height: 10%;
     width: 50%;
     display: flex;
     justify-content: space-around;
@@ -516,6 +580,8 @@ a:hover::before{
     transition: all 0.5s;
     padding: 10px;
     border-bottom: 2px white solid;
+
+    font-family: "typo2";
 }
 .galeryNav a:hover{
     transition: all 0.5s;
@@ -547,20 +613,27 @@ a:hover::before{
     justify-items: center;
     row-gap: 25%;
     width: 100vw;
+    height: 100%;
 }
 
 .container_galery{
     position: relative;
-    height: 25vh;
-    width: 35vh;
+    height: 30vh;
+    width: 20vw;
 
     background-color: rgba(30, 30, 30, 0.6  );
 
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
+    border-radius: 20px;
     
+}
+
+.container_galery:hover{
+    transition: all 1s;
+    background-size: -10%;
 }
 .clickable{
     box-shadow: 0px 0px 5px #FC2F00 ;
@@ -584,16 +657,46 @@ a:hover::before{
 
 
 .whoIam{
-    width: 100%;
+    width: 50%;
 
     margin-bottom: 5%;
     margin-top: 5%;
+    margin-left: 25%;
+    padding: 20px;
 
     display: flex;
+    font-size: 1vw;
     flex-direction: column;
     justify-content: inherit;
-    align-items: center;
-    text-align: start;
+    text-align: center;
+
+    line-height: 30px;
+}
+
+.whoIam a{
+    text-decoration: none;
+    color: #EC7D10 ;
+    border-bottom: 5px solid white;
+    display: contents;
+}
+.whoIam a:visited{
+    text-decoration: none;
+    color: #EC7D10 ;
+    border-bottom: 5px solid white;
+    display: contents;
+}
+.whoIam a:hover{
+    text-decoration: none;
+    color: #EC7D10 ;
+    text-shadow: 0px 0px 2px #EC7D10;
+    border-bottom: 5px solid white;
+    display: contents;
+}
+
+
+.whoIam ul{
+    font-size: 1.5vw;
+    margin-left: 50px;
 }
 
 .whoIam h2{
@@ -667,19 +770,27 @@ form label{
 
 .input{
 
-    color: white;
+    font-family: "typo3";
+    letter-spacing: 3px;
+
+    color: #ffffff;
     height: 3vh;
     width: 30vw;
 
-    border-radius: 15px;
-    border: 2px solid #ffbe0a91;
-    box-shadow: 0px 0px 10px #ffbe0aa1;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 2px solid #FFBC0A ;
+    /* box-shadow: 0px 0px 5px #ffbe0aa1; */
 
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0);
 
     margin: 10px;
 
-    font-family: "typo1";
+
+}
+
+label{
+    letter-spacing: 2px;
 }
 
 .inputSubmit{
@@ -697,14 +808,19 @@ form label{
     font-size: 1vw;
 
     border: 2px solid #ffbe0a91;
-    box-shadow: 0px 0px 10px #ffbe0ace;
+    /* box-shadow: 0px 0px 50px #ffbe0ace; */
 
-    background-color: #c99300b9;
+    background-color: #e0b805e0;
     
+    font-family: "typo1";
+    letter-spacing: 2px;
+    transition: all 0.2s;
 }
 
 .inputSubmit:hover{
     background-color: rgb(201, 147, 0);
+    letter-spacing: 3px;
+    box-shadow: 0px 0px 10px #ffbe0ace;
 }
 
 
@@ -729,4 +845,167 @@ form label{
     width: 64px;
 
     margin-left: 20%;
+}
+
+
+.menu{
+    display: none;
+}
+
+
+
+
+@media screen and (orientation:portrait) {
+    .header{
+        height: 8vh;
+    }
+
+    .TitreContaint{
+        height: 65vh;
+    }
+    .TitreContaint h1{
+        top: 14%;
+        left: 13%;
+        font-size: 6vw;
+    }
+    .TitreContaint h2{
+        left: 51%;
+        font-size: 5.5vw;
+        top: 20%;
+    }
+    .myHead{
+        top: 15%;
+        left: -4%;
+    }
+
+    /* navigation */
+
+
+
+    .navigation{
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+
+        
+    }
+
+    li a{
+        font-size: 7vw;
+    }
+
+    .navigation ol{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        height: 100%;
+        margin-left: 25%;
+    }
+
+    ol li{
+        width: fit-content;
+    }
+
+    /* ########### */
+    .left{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .right{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Container{
+        height: 32%;
+        width: 89%;
+    }
+
+    .imageContent{
+        top: 0;
+        height: 100%;
+    }
+
+    .titre_project{
+        font-size: 6vw;
+    }
+
+    .ContainerDescription{
+        text-align: start;
+        width: 80%;
+    }
+
+    .left .textDescription{
+        text-align: left;
+    }
+
+
+    /* lab */
+    .labs {
+        height: 267vh;
+        width: 100vw;
+    }
+
+    .Titre{
+        padding-top: 1vh;
+        height: auto;
+    }
+
+    .galeryNav{
+        width: 85%;
+    }
+
+    .galeryNav a{
+        font-size: 4vw;
+    }
+
+    .galeryPhoto{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2%;
+    }
+
+    .container_galery{
+        width: 100vw;
+        height: 31vh;
+    }
+
+    .whoIam{
+        width: 80%;
+    }
+
+    .contactForm form{
+        width: 100%;
+    }
+
+    form label{
+        font-size: 6vw;
+    }
+
+    .input{
+        width: 80%;
+    }
+
+    .inputSubmit{
+        width: 38vw;
+        font-size: 3vw;
+    }
+
+
+    .menu{ 
+        z-index: 1000000;
+        background-image: url("./images/cross.png");
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
+        height: 60px;
+        width: 60px;
+    }
 }

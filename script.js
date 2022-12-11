@@ -35,13 +35,7 @@ list2.forEach((element, index) => {
         list2.forEach((elm) => {
             remove_class(elm, "selected");
         });
-        element.classList.add("selected");
-
-
-        
-
-        
-        
+        element.classList.add("selected");   
 
 
         list2.forEach((elm, index) => {
@@ -63,9 +57,9 @@ let button = [...ButtonElm];
 
 const contenu3D = [{titre:"Sabre CyberPunk", image: "https://math-pixel.github.io/portfolio/image/sbre%20cyberpunk.png", link:""},{titre:"Usine", image: "https://math-pixel.github.io/portfolio/image/usine%20rendu.png", link:""},{titre:"Sabre Deamon Slayer", image: "https://math-pixel.github.io/portfolio/image/rengoku%20sword1.png", link:""}, {titre:"Maison Japonaise", image: "https://math-pixel.github.io/portfolio/image/japon%20blender3.png", link:""}];
 
-const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.JPG", link:""},{titre:"Photographie", image: "./images/voiture.JPG", link:""}];
+const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.jpg", link:""},{titre:"Photographie", image: "./images/voiture.JPG", link:""}];
 
-const contenuCreation = [{titre:"3D Printer", image: "./images/3d printer.jpg", link:"a"},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
+const contenuCreation = [{titre:"3D Printer", image: "./images/3dprinter2.jpg", link:""},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
 
 let arrayDisplay = [[...contenu3D],[ ...contenuPhoto],[...contenuCreation]];
 
@@ -108,4 +102,20 @@ button.forEach((button, index) => {
 });
 
 setCarrousel(0);
+
+let menu_open = true;
+
+document.getElementById("menu").addEventListener("click", (e) => {
+    if (menu_open === true) {
+        menu_open = false;
+        document.getElementById("menu").style.backgroundImage = "url('./images/burger.png')";
+        document.getElementById("menu").style.filter = "invert(1)";
+        document.getElementById("navigation").style.display = "none";
+    }else{
+        menu_open = true;
+        document.getElementById("menu").style.backgroundImage = "url('./images/cross.png')";
+        document.getElementById("menu").style.filter = "invert(0)";
+        document.getElementById("navigation").style.display = "block";
+    }
+});
 

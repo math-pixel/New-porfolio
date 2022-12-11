@@ -34,7 +34,7 @@ loader.load( 'mathieu_smooth.glb', function ( gltf ) {
     gltf.scene.position.z = 0;
     gltf.scene.position.y = -6.5;
     gltf.scene.rotation.x = 0;
-    //console.log(gltf.scene.material.opacity)
+    console.log(gltf.scene)
 },function ( xhr ) {
     // called while loading is progressing
     console.log( ( xhr.loaded / xhr.total * 100 ) + '% + loaded' );
@@ -43,6 +43,8 @@ loader.load( 'mathieu_smooth.glb', function ( gltf ) {
     console.error( error );
 
 } );
+
+console.log(Perso);
 
 // ########################## creation temp sphere
 
@@ -60,8 +62,8 @@ loader.load( 'mathieu_smooth.glb', function ( gltf ) {
 // ########################## light
 
 
-//   var lightA1 = new THREE.AmbientLight(0xFFFFFF, 0.1);
-//   scene.add(lightA1);
+  var lightA1 = new THREE.AmbientLight(0xFFFFFF, 0.6);
+  
 
   var lightD1 = new THREE.DirectionalLight( 0xf3c795, 0.1 );
   lightD1.position.set( 0, 0, 2 );
@@ -78,6 +80,14 @@ loader.load( 'mathieu_smooth.glb', function ( gltf ) {
   const Pointlight = new THREE.PointLight( 0xffffff, 2, 4 );
   Pointlight.position.set( 0, -5, 3 );
   scene.add( Pointlight );
+
+  if(window.innerHeight > window.innerWidth){
+    //scene.background = new THREE.Color( 0xFFFF00 );
+    scene.remove(Pointlight);
+    scene.add(lightA1);
+  }else{
+
+  }
 
 //   const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
 //   scene.add( pointLightHelper );
@@ -116,7 +126,14 @@ document.getElementById("myHead").addEventListener(("mousemove"), (e) => {
         
 function animate() {
     //console.log(X + " : " + Y);   
-    renderer.setSize( window.innerWidth, window.innerHeight, true);
+    if(window.innerHeight > window.innerWidth){
+        renderer.setSize( window.innerWidth *2 , window.innerWidth, true);
+    }else{
+        renderer.setSize( window.innerWidth, window.innerHeight, true);
+        Pointlight.position.x = X;
+        Pointlight.position.y = Y;
+    }
+    
 
     requestAnimationFrame( animate );
     renderer.render( scene, camera );
@@ -129,8 +146,7 @@ function animate() {
     }
 
 
-    Pointlight.position.x = X;
-    Pointlight.position.y = Y;
+
     
     //console.log(X)
     //light.position.set( X, Y, 50 );
