@@ -6,11 +6,14 @@ let list2 = [...htmlcol]
 
 const class_spe = ["accueil", "work", "lab", "who", "contact"];
 
-function remove_class(){
-    list2.forEach((element) => {
-        element.classList.remove("selected");
-    });
-} 
+function remove_class(element, className){
+    element.classList.remove(className);
+}
+
+
+function change_state(){
+
+}
 
 list2.forEach((element, index) => {
     console.log(index)
@@ -28,9 +31,26 @@ list2.forEach((element, index) => {
 
     })
 
-    element.addEventListener("click" , () => {
-        remove_class();
+    element.addEventListener("click" , (e) => {
+        list2.forEach((elm) => {
+            remove_class(elm, "selected");
+        });
         element.classList.add("selected");
+
+
+        
+
+        
+        
+
+
+        list2.forEach((elm, index) => {
+            elm.children[0].classList.remove("animation_forward");
+            elm.children[0].children[0].classList.remove("animation_forward_img");
+        });
+
+        element.children[0].classList.add("animation_forward");
+        element.children[0].children[0].classList.add("animation_forward_img");
     });
 });
 
@@ -43,9 +63,9 @@ let button = [...ButtonElm];
 
 const contenu3D = [{titre:"Sabre CyberPunk", image: "https://math-pixel.github.io/portfolio/image/sbre%20cyberpunk.png", link:""},{titre:"Usine", image: "https://math-pixel.github.io/portfolio/image/usine%20rendu.png", link:""},{titre:"Sabre Deamon Slayer", image: "https://math-pixel.github.io/portfolio/image/rengoku%20sword1.png", link:""}, {titre:"Maison Japonaise", image: "https://math-pixel.github.io/portfolio/image/japon%20blender3.png", link:""}];
 
-const contenuPhoto = [{titre:"", image: "", link:""},{titre:"", image: "", link:""}];
+const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.jpg", link:""},{titre:"Photographie", image: "./images/voiture.jpg", link:""}];
 
-const contenuCreation = [{titre:"3D Printer", image: "https://math-pixel.github.io/portfolio/image/print_3d/65.jpg", link:""},{titre:"Volet Automatique", image: "", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "", link:""}]
+const contenuCreation = [{titre:"3D Printer", image: "./images/3d printer.jpg", link:"a"},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
 
 let arrayDisplay = [[...contenu3D],[ ...contenuPhoto],[...contenuCreation]];
 
@@ -64,6 +84,9 @@ function setCarrousel(index){
         let container = document.createElement("div");
         container.classList.add("container_galery");
         container.style.backgroundImage = `url(${element.image})`;
+        if (element.link !== "") {
+            container.classList.add("clickable");
+        }
     
         parentLabs.appendChild(container);
     
