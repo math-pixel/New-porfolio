@@ -23,7 +23,7 @@ const loader = new THREE.GLTFLoader();
 
 let Perso;
 
-loader.load( 'ilan_smooth.glb', function ( gltf ) {
+loader.load( 'mathieu_smooth.glb', function ( gltf ) {
     
     Perso = gltf.scene;
     scene.add( gltf.scene );

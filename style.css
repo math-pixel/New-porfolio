@@ -16,7 +16,34 @@
         background-size: 10%;
     }
     100% {
-        background-size: 80000%;
+        background-size: 20000%;
+    }
+}
+
+@keyframes bg_move_img {
+    0%{
+        background-size: 10%;
+    }
+    100% {
+        background-size: 45000%;
+    }
+}
+
+@keyframes bg_move_img_revert {
+    0%{
+        background-size: 45000%;
+    }
+    100% {
+        background-size: 10%;
+    }
+}
+
+@keyframes bg_move_invert {
+    0%{
+        background-size: 20000%;
+    }
+    100% {
+        background-size: 10%;
     }
 }
 
@@ -129,19 +156,34 @@ ol li{
 }
 li img{
     color: transparent;
+
+    /* filter: invert(1); */
+
+    height: 10px;
+    width: 10px;
 }
 
 li a{
+
+    width: fit-content;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
     text-decoration: none;
     
     background-color: #CA4246;
-    background-image: linear-gradient(179deg, red 5%, white 5%);
+
     background-clip: text;
+    
     color: transparent;
 
-
     background-size: 10%;
+
+    animation: bg_move_invert 1s ease;
+    animation-fill-mode: forwards;
 }
 
 .accueil{
@@ -165,7 +207,54 @@ li a{
     box-shadow: 0px 0px 5px #FFBC0A,0px 0px 10px #FFBC0A,0px 0px 15px #FFBC0A;
 }
 
+
+.animation_forward{
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.74);
+    animation: bg_move 0.5s ease ;
+    animation-fill-mode: forwards;
+}
+
+.animation_forward_img{
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.74);
+    animation: bg_move_img 0.5s ease ;
+    animation-fill-mode: forwards;
+}
+
+.txtAccueil{
+    background-image: linear-gradient(179deg, #C200FB 10%, white 10%);
+    background-size: 10%;
+}
+.txtWorks{
+    background-image: linear-gradient(179deg, #EC0868 10%, white 10%);
+    background-size: 10%;
+}
+.txtlab{
+    background-image: linear-gradient(179deg, #FC2F00 10%, white 10%);
+    background-size: 10%;
+}
+.txtwho{
+    background-image: linear-gradient(179deg, #EC7D10 10%, white 10%);
+    background-size: 10%;
+}
+.txtconta{
+    background-image: linear-gradient(179deg, #FFBC0A 10%, white 10%);
+    background-size: 10%;
+}
+
+
+/* .imgAccueil{
+    background-color: red;
+    mask-image: url("https://img.icons8.com/small/64/null/home.png");
+    mask-position: center;
+    mask-size: contain;
+
+    animation: bg_move_img_revert 0.8s ease ;
+    animation-fill-mode: forwards;
+} */
+
+
 .bar_overlay{
+
     position: absolute;
     top: -10%;
     left: 0;
@@ -239,10 +328,8 @@ a:hover::before{
     height: 32px;
     filter: invert(1);
     margin: 2px;
-}
 
-.imgAccueil{
-    background-color: #CA4246;
+    /* align-self: center; */
 }
 
 /* ################## */
@@ -391,7 +478,7 @@ a:hover::before{
 /* ############################### */
 
 .Projet1{
-    background-image: url("./mood board/mood board.png");   
+    background-image: url("images/workshop1.png");   
 }
 
 
@@ -467,12 +554,18 @@ a:hover::before{
     height: 25vh;
     width: 35vh;
 
-    background-color: rgba(30, 30, 30, 0.4);
+    background-color: rgba(30, 30, 30, 0.6  );
 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    
 }
+.clickable{
+    box-shadow: 0px 0px 5px #FC2F00 ;
+}
+
 .Title_galery{
     position: absolute;
     top: 0;
@@ -573,6 +666,8 @@ form label{
 
 
 .input{
+
+    color: white;
     height: 3vh;
     width: 30vw;
 
@@ -583,13 +678,55 @@ form label{
     background-color: rgba(255, 255, 255, 0.1);
 
     margin: 10px;
+
+    font-family: "typo1";
 }
 
 .inputSubmit{
 
+    color: white;
+
     margin: 20px;
-    height: 2vh;
-    width: 5vw;
+    height: 4vh;
+    width: 10vw;
+
+    border-radius: 50px;
 
     align-self: flex-end;
+
+    font-size: 1vw;
+
+    border: 2px solid #ffbe0a91;
+    box-shadow: 0px 0px 10px #ffbe0ace;
+
+    background-color: #c99300b9;
+    
+}
+
+.inputSubmit:hover{
+    background-color: rgb(201, 147, 0);
+}
+
+
+.social{
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.Github{
+    height: 64px;
+    width: 64px;
+    filter: invert(1);
+
+    margin-right: 20%;
+}
+
+.linkedin{
+    height: 64px;
+    width: 64px;
+
+    margin-left: 20%;
 }
