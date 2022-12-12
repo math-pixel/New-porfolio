@@ -864,6 +864,10 @@ label{
         height: 8vh;
     }
 
+    .logo{
+        max-height: 13vw;
+    }
+
     .TitreContaint{
         height: 65vh;
     }

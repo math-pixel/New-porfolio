@@ -89,8 +89,8 @@ console.log(Perso);
 
   }
 
-  const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
-  scene.add( pointLightHelper );
+//   const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
+//   scene.add( pointLightHelper );
 
 
   renderer.shadowMap.enabled = true;
