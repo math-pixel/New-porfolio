@@ -77,8 +77,8 @@ console.log(Perso);
   lightD1.shadow.mapSize.height = lightD1.shadow.mapSize.width = 1000;
   scene.add( lightD1 );
 
-  const Pointlight = new THREE.PointLight( 0xffffff, 2, 4 );
-  Pointlight.position.set( 0, -5, 3 );
+  const Pointlight = new THREE.PointLight( 0xffffff, 0.5, 10 );
+  Pointlight.position.set( 0, -5, 4 );
   scene.add( Pointlight );
 
   if(window.innerHeight > window.innerWidth){
@@ -89,8 +89,8 @@ console.log(Perso);
 
   }
 
-//   const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
-//   scene.add( pointLightHelper );
+  const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
+  scene.add( pointLightHelper );
 
 
   renderer.shadowMap.enabled = true;
@@ -113,9 +113,9 @@ let Y = 0;
 
 
 document.getElementById("myHead").addEventListener(("mousemove"), (e) => {
-    X = clamp(e.clientX,0,window.innerWidth, -7, 7 );
+    X = clamp(e.clientX,0,window.innerWidth, -8.2, 8.2 );
     
-    Y = clamp(e.clientY,0,window.innerHeight, 0, -8 );
+    Y = clamp(e.clientY,0,window.innerHeight, 0.5, -8.5 );
     
 
     //

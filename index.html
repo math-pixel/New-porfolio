@@ -10,7 +10,7 @@
 <body>
 
     <header class="header">
-        <img src="" alt="logo de mathieu chavanel" class="logo" id="logo">
+        <img src="./images/logo.png" alt="logo de mathieu chavanel" class="logo" id="logo">
 
         <!--  <svg  ########################################################## LOOGO  #######################
         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Workshop</h2>
                 <p class="textDescription">Un premier Project effectuer en ecole qui consistait a travailler avec des graphistes. <br>L' Objectif etant de creer deux sites vitrines pour un festival avec la contrainte d' avoir une seule page HTML</p>
-                <input type="button" class="more" id="more" value="Voir Plus">
+                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
             </div>
             
 
@@ -68,7 +68,7 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Jeux Video (WEB)</h2>
                 <p class="textDescription">Jeux Video creé en HTML / CSS / JS, une direction artistique orienter illustration et un theme sur une taverne conviviale avec une ambiance sonore agreable <br>Le but : Retrouver la mascotte de la taverne qui ce cache derriere ces fut !</p>
-                <input type="button" class="more" id="more" value="Voir Plus">
+                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
             </div>  
         </div>
 
@@ -82,24 +82,10 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Volet Connecte</h2>
                 <p class="textDescription">Suite au renovation de notre coproprieter les anciens volet manuel ont été remplacé par des volets automatique avec telecommande <br>Donc pour commencer une partit d' un gros project qui est de creer une maison connecté soit même j'ai commencer a connecté mon volet a un ordinateur pour le controler a distance</p>
-                <input type="button" class="more" id="more" value="Voir Plus">
+                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
             </div>
             
 
-        </div>
-
-        <div class="right">
-
-            <div class="Container">
-                <div class="backgroundContainer Projet1"></div>
-                <img src="./mood board/mood board.png" class="imageContent Projet1"></img>
-            </div>
-
-            <div class="ContainerDescription">
-                <h2 class="titre_project">Workshop 1</h2>
-                <p class="textDescription">description</p>
-                <input type="button" class="more" id="more" value="Voir Plus">
-            </div>  
         </div>
 
     </section>
@@ -110,9 +96,9 @@
         <hr>
         <div class="mainGalery">
             <div class="galeryNav">
-                <a href="#3d" id="3d" target>3D</a>
-                <a href="#photographie" id="photographie">Photographie / ART</a>
-                <a href="#creation" id="creation">Creation</a>
+                <a  class="btn_lab select" id="3d" target>3D</a>
+                <a  class="btn_lab" id="photographie">Photographie / ART</a>
+                <a  class="btn_lab" id="creation">Creation</a>
             </div>
             <div class="galeryPhoto" id="galeryPhoto">
 

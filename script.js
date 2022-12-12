@@ -59,7 +59,7 @@ const contenu3D = [{titre:"Sabre CyberPunk", image: "https://math-pixel.github.i
 
 const contenuPhoto = [{titre:"Drone", image: "./images/drone1.JPG", link:""},{titre:"Photoshop", image: "./images/constellation.png", link:""},{titre:"IA", image: "./images/ia1.png", link:""},{titre:"IA", image: "./images/ia2.png", link:""},{titre:"Photographie", image: "./images/moto.jpg", link:""},{titre:"Photographie", image: "./images/dos.jpg", link:""},{titre:"Photographie", image: "./images/voiture.JPG", link:""}];
 
-const contenuCreation = [{titre:"3D Printer", image: "./images/3dprinter2.jpg", link:""},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Reveil Conecter", image: "", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
+const contenuCreation = [{titre:"3D Printer", image: "./images/3dprinter2.jpg", link:""},{titre:"Volet Automatique", image: "./images/volet.png", link:""},{titre:"Table de Mixage", image: "https://math-pixel.github.io/portfolio/image/tableMix.jpg", link:""},{titre:"Borne Arcade", image: "https://retropie.org.uk/wp-content/uploads/2016/04/Retropie_Splash.png", link:""}]
 
 let arrayDisplay = [[...contenu3D],[ ...contenuPhoto],[...contenuCreation]];
 
@@ -95,9 +95,15 @@ function setCarrousel(index){
 
 
 
-button.forEach((button, index) => {
-    button.addEventListener("click", () => {
+button.forEach((btn, index) => {
+    console.log(btn)
+    btn.addEventListener("click", () => {
         setCarrousel(index);
+
+        button.forEach((btn2) =>{
+            btn2.classList.remove("select");
+        });
+        btn.classList.add("select");
     });
 });
 
@@ -119,3 +125,14 @@ document.getElementById("menu").addEventListener("click", (e) => {
     }
 });
 
+
+function open_project(){
+    alert("option pas encore mit a jour \nVous pourrez voir les details de chaque projet avec des bout de code clé")
+}
+
+
+setTimeout(() => {
+    document.getElementsByClassName("liste_nav")[0].classList.add("selected");
+    document.getElementsByClassName("liste_nav")[0].classList.add("animation_forward");
+    document.getElementsByClassName("liste_nav")[0].children[0].classList.add("animation_forward");
+}, 50);
