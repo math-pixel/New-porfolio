@@ -133,6 +133,6 @@ function open_project(){
 
 setTimeout(() => {
     document.getElementsByClassName("liste_nav")[0].classList.add("selected");
-    document.getElementsByClassName("liste_nav")[0].classList.add("animation_forward");
+    // document.getElementsByClassName("liste_nav")[0].classList.add("animation_forward");
     document.getElementsByClassName("liste_nav")[0].children[0].classList.add("animation_forward");
 }, 2000);
