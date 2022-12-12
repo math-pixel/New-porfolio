@@ -892,7 +892,7 @@ label{
 
     .navigation{
         background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
@@ -984,6 +984,16 @@ label{
 
     .whoIam{
         width: 80%;
+        margin-bottom: 4%;
+        margin-top: 5%;
+        margin-left: 7%;
+        padding: 20px;
+        display: flex;
+        font-size: 3vw;
+        flex-direction: column;
+        justify-content: inherit;
+        text-align: center;
+        line-height: 15px;
     }
 
     .contactForm form{
