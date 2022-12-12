@@ -10,10 +10,21 @@ function remove_class(element, className){
     element.classList.remove(className);
 }
 
-
-function change_state(){
-
-}
+// call this to Disable
+function disableScroll() {
+    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+  }
+  
+  // call this to Enable
+  function enableScroll() {
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+    window.removeEventListener('touchmove', preventDefault, wheelOpt);
+    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+  }
 
 list2.forEach((element, index) => {
     console.log(index)
@@ -117,11 +128,13 @@ document.getElementById("menu").addEventListener("click", (e) => {
         document.getElementById("menu").style.backgroundImage = "url('./images/burger.png')";
         document.getElementById("menu").style.filter = "invert(1)";
         document.getElementById("navigation").style.display = "none";
+        // enableScroll();
     }else{
         menu_open = true;
         document.getElementById("menu").style.backgroundImage = "url('./images/cross.png')";
         document.getElementById("menu").style.filter = "invert(0)";
         document.getElementById("navigation").style.display = "block";
+        // disableScroll();
     }
 });
 
