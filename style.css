@@ -97,6 +97,7 @@ hr{
 
     /* color: transparent; */
     background-clip: text;
+    -webkit-background-clip:text;
     border-radius: 10px;
     box-shadow: none;
 
@@ -188,6 +189,7 @@ li a{
     background-color: #CA4246;
 
     background-clip: text;
+    -webkit-background-clip:text;
     
     color: transparent;
 
