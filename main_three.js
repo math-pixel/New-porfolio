@@ -127,7 +127,7 @@ document.getElementById("myHead").addEventListener(("mousemove"), (e) => {
 function animate() {
     //console.log(X + " : " + Y);   
     if(window.innerHeight > window.innerWidth){
-        renderer.setSize( window.innerWidth *2 , window.innerWidth, true);
+        renderer.setSize( window.innerWidth, window.innerWidth, true);
     }else{
         renderer.setSize( window.innerWidth, window.innerHeight, true);
         Pointlight.position.x = X;
