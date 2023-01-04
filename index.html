@@ -2,12 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+    <title>Mathieu Chavanel Bogniaux - Portfolio</title>
+    <meta name="description" content="Portfolio de Mathieu Chavanel Bogniaux - développeur web"/>
 </head>
 <body>
+
+    <section class="voirPlus" id="voirPlus">
+
+
+        <h1 class="Titre" id="titreVoirPlus"></h1>
+
+        <p class="description_voirPlus" id="description_voirPlus"></p>
+
+        <div class="left">
+            <img src="https://static.freeimages.com/images/home/filetypes/photo.png" alt="" id="img_1">
+
+            <div class="ContainerDescription">
+                <h2 class="titre_project" id="titre_project_VoirPlus1"></h2>
+                <p class="textDescription" id="textDescription_VoirPlus1"></p>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="https://static.freeimages.com/images/home/filetypes/photo.png" alt="" id="img_2">
+
+            <div class="ContainerDescription">
+                <h2 class="titre_project" id="titre_project_VoirPlus"></h2>
+                <p class="textDescription" id="textDescription_VoirPlus"></p>
+            </div>
+        </div>
+      
+
+
+        <div class="cross" id="cross"></div>
+
+    </section>
 
     <header class="header">
         <img src="./images/logo.png" alt="logo de mathieu chavanel" class="logo" id="logo">
@@ -42,6 +74,20 @@
 
         <h1 class="Titre" id="Titre">Travaux</h1>
 
+        <div class="right">
+
+            <div class="Container">
+                <div class="backgroundContainer Projet4"></div>
+                <img src="./images/filmotheque.PNG" class="imageContent Projet4"></img>
+            </div>
+
+            <div class="ContainerDescription">
+                <h2 class="titre_project">Filmotheque</h2>
+                <p class="textDescription">Filmotheque collaborative creer lors d'un project final d'ecole. Une filmotheque est un site ou un endroit qui regroupe plusieur film et les tries pour pouvoir les retrouver et les harchivers</p>
+                <input type="button" class="more pointer" id="more" value="Voir Plus" onclick='open_project("Filmotheque")'>
+            </div>  
+        </div>
+
         <div class="left">
 
             <div class="Container">
@@ -52,7 +98,7 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Workshop</h2>
                 <p class="textDescription">Un premier Project effectuer en ecole qui consistait a travailler avec des graphistes. <br>L' Objectif etant de creer deux sites vitrines pour un festival avec la contrainte d' avoir une seule page HTML</p>
-                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
+                <input type="button" class="more pointer" id="more" value="Voir Plus" onclick="open_project('Workshop')">
             </div>
             
 
@@ -68,7 +114,7 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Jeux Video (WEB)</h2>
                 <p class="textDescription">Jeux Video creé en HTML / CSS / JS, une direction artistique orienter illustration et un theme sur une taverne conviviale avec une ambiance sonore agreable <br>Le but : Retrouver la mascotte de la taverne qui ce cache derriere ces fut !</p>
-                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
+                <input type="button" class="more pointer" id="more" value="Voir Plus" onclick='open_project("Jeux Video \(WEB\)")'>
             </div>  
         </div>
 
@@ -82,7 +128,7 @@
             <div class="ContainerDescription">
                 <h2 class="titre_project">Volet Connecte</h2>
                 <p class="textDescription">Suite au renovation de notre coproprieter les anciens volet manuel ont été remplacé par des volets automatique avec telecommande <br>Donc pour commencer une partit d' un gros project qui est de creer une maison connecté soit même j'ai commencer a connecté mon volet a un ordinateur pour le controler a distance</p>
-                <input type="button" class="more" id="more" value="Voir Plus" onclick="open_project()">
+                <input type="button" class="more pointer" id="more" value="Voir Plus" onclick="open_project('Volet Connecte')">
             </div>
             
 
@@ -96,9 +142,9 @@
         <hr>
         <div class="mainGalery">
             <div class="galeryNav">
-                <a  class="btn_lab select" id="3d" target>3D</a>
-                <a  class="btn_lab" id="photographie">Photographie / ART</a>
-                <a  class="btn_lab" id="creation">Creation</a>
+                <a  class="btn_lab select pointer" id="creation">Creation</a>
+                <a  class="btn_lab pointer" id="3d">3D</a>
+                <a  class="btn_lab pointer" id="photographie">Photographie / ART</a>
             </div>
             <div class="galeryPhoto" id="galeryPhoto">
 
@@ -110,18 +156,10 @@
     <section id="who"> 
         <h1 class="Titre">Qui suis-je ?</h1>
         <div class="whoIam">
-            Bienvenue sur mon portfolio,
-            Comme vous avez pu le voir je suis très curieux et j'aime innover / apprendre dans plein de domaine different
-            Après l'obtention de mon bac et un Job d'été dans l'evenmentiel en 2022, je suis actuellement 
-            en train de preparé mon Bachelor de Developpeur Web & Mobile
-            <hr>
-            je suis plutot Sportif ( ceinture noire de JUDO ), Curieux, Perseverant, Relationnel, et pour le reste ce seras a vous de me dire ... 
-            Pour suivre mon actualiter c'est sur mon 
-
             Bienvenue sur mon portfolio,<br>
 Comme vous avez pu le voir je suis très curieux et j'aime innover / apprendre dans plein de domaine différents.<br>
 Après l'obtention de mon bac et un Job d'été dans l'évènementiel en 2022, je suis actuellement en train de préparer mon Bachelor de Developpeur Web & Mobile<br>
-je suis plutôt Sportif ( ceinture noire de JUDO ), Curieux, Persévérant, Relationnel, et pour le reste ce seras a vous de me dire…<br><hr>
+je suis plutôt Sportif ( ceinture noire de JUDO, Slackline, Velo, Escalade, ...  ), Curieux, Persévérant et Relationnel<br><hr>
 Pour suivre mon actualité c'est sur mon <a href="https://www.linkedin.com/feed/">LinkedIn</a>.<br>
             </p>
         </div>
@@ -133,30 +171,34 @@ Pour suivre mon actualité c'est sur mon <a href="https://www.linkedin.com/feed/
         <h1 class="Titre">Contact</h1>
         <div class="containerContact">
             <div class="contactForm">
-                <form action="">
+                <form action="mailto:mathcb74@gmail.com?subject=demande d'offre Portfolio">
 
-                    <label for="email">Nom :</label>
+                    <label for="Nom">Nom :</label>
                     <input type="text" id="Nom" class="input" placeholder="Toto" required>
-                    <label for="Object">Email :</label>
+                    <label for="Email">Votre email :</label>
                     <input type="email" id="Email" class="input" placeholder="Toto@gmail.com" required>
                     <label for="message">Message :</label>
                     <input type="text" id="message" class="input" placeholder="Message" required>
-                    <input type="submit" class="inputSubmit">
+                    <input type="submit" class="inputSubmit pointer">
      
                 </form>
             </div>
         </div>
         <div class="social">
-            <a href="https://www.linkedin.com/in/mathieu-chavanel-50488b251/" target="_blank"><img src="/images/linkedin.png" alt="" class="linkedin"></a>
-            <a href="https://github.com/math-pixel" target="_blank" ><img src="/images/github.png" alt="" class="Github"></a>
+            <a href="https://www.linkedin.com/in/mathieu-chavanel-50488b251/" target="_blank"><img src="./images/linkedin.png" alt="" class="linkedin"></a>
+            <a href="https://github.com/math-pixel" target="_blank" ><img src="./images/github.png" alt="" class="Github"></a>
         </div>
     </section>
     <!-- <footer>
         <a href="">Contacter moi</a>
     </footer> -->
 
-    <script src="three.js"></script>
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <!-- <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script> -->
+    <!-- <script type="module" src="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/GLTFLoader.js"></script> -->
+    <script src="./GLTFLoader.js"></script>
+    
     <script src="main_three.js"></script>
     <script src="script.js"></script>
 </body>

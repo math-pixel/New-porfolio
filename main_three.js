@@ -1,5 +1,7 @@
 // ########################## init scene
 
+
+
 const scene = new THREE.Scene();
 
 //scene.background = new THREE.Color( 0xFFFF00 );
@@ -23,7 +25,7 @@ const loader = new THREE.GLTFLoader();
 
 let Perso;
 
-loader.load( 'mathieu_smooth.glb', function ( gltf ) {
+loader.load('mathieu_smooth.glb', function ( gltf ) {
     
     Perso = gltf.scene;
     scene.add( gltf.scene );
@@ -43,18 +45,6 @@ loader.load( 'mathieu_smooth.glb', function ( gltf ) {
     console.error( error );
 
 } );
-
-console.log(Perso);
-
-// ########################## creation temp sphere
-
-// const geometry = new THREE.SphereGeometry( 0.1, 32, 16 );
-// const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-// const sphere = new THREE.Mesh( geometry, material );
-// scene.add( sphere );
-
-
-
 
 // const axesHelper = new THREE.AxesHelper( 1 );
 // scene.add( axesHelper );
@@ -86,7 +76,7 @@ console.log(Perso);
     scene.remove(Pointlight);
     scene.add(lightA1);
   }else{
-
+    scene.remove(lightA1);
   }
 
 //   const pointLightHelper = new THREE.PointLightHelper( Pointlight, 0.1 );
@@ -116,9 +106,7 @@ document.getElementById("myHead").addEventListener(("mousemove"), (e) => {
     X = clamp(e.clientX,0,window.innerWidth, -8.2, 8.2 );
     
     Y = clamp(e.clientY,0,window.innerHeight, 0.5, -8.5 );
-    
 
-    //
 });
 
 
@@ -127,7 +115,7 @@ document.getElementById("myHead").addEventListener(("mousemove"), (e) => {
 function animate() {
     //console.log(X + " : " + Y);   
     if(window.innerHeight > window.innerWidth){
-        renderer.setSize( window.innerWidth, window.innerWidth, true);
+        renderer.setSize( window.innerWidth , window.innerWidth, true);
     }else{
         renderer.setSize( window.innerWidth, window.innerHeight, true);
         Pointlight.position.x = X;
@@ -143,15 +131,7 @@ function animate() {
     if (Perso) {
     Perso.rotation.y += 0.01;
     //Perso.rotation.x += 0.01;
-    }
-
-
-
-    
-    //console.log(X)
-    //light.position.set( X, Y, 50 );
-    //Perso.scale.set(1,15,15);
-        
+    }        
 }
 animate()
 

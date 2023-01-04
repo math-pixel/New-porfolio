@@ -75,6 +75,7 @@ body{
 
     overflow-x: hidden;
 
+
     font-family: "typo1";
 }
 
@@ -97,7 +98,7 @@ hr{
 
     /* color: transparent; */
     background-clip: text;
-    -webkit-background-clip:text;
+    -webkit-background-clip : text;
     border-radius: 10px;
     box-shadow: none;
 
@@ -189,7 +190,7 @@ li a{
     background-color: #CA4246;
 
     background-clip: text;
-    -webkit-background-clip:text;
+    -webkit-background-clip : text;
     
     color: transparent;
 
@@ -414,7 +415,7 @@ a:hover::before{
 }
 
 .left{
-    width: 100vw;
+    width: 100%;
     height: 75vh;
 
     display: flex;
@@ -548,6 +549,10 @@ a:hover::before{
     top: 32%;
 }
 
+.Projet4{
+    background-image: url("images/filmotheque.PNG");
+    top: 28%;
+}
 /* ######################## */
 /* Labs */
 /* ######################## */
@@ -860,6 +865,78 @@ label{
 
 
 
+.voirPlus{
+    position: fixed;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgb(37, 37, 38);
+
+    z-index: 100001;
+
+    
+    transition: 1s all;
+    opacity: 1; 
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: none;
+}
+
+.voirPlus img{
+    height: auto;
+    width: 40%;
+
+    border-radius: 5px;
+}
+
+.voirPlus .description_voirPlus{
+    margin: 5vh;
+    text-align: center;
+}
+
+.voirPlus .left{
+    height: 50vh;
+}
+.voirPlus .right{
+    height: 50vh;
+}
+
+.voirPlus a{
+    text-decoration: none;
+
+    color: #0872ec;
+
+    font-family: "typo2";
+    font-size: 1.1vw;
+    text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000;
+}
+
+.cross{
+    background-image: url("./images/cross.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 64px;
+    width: 64px;
+
+    position: fixed;
+
+    top: 50px;
+    right: 50px;
+    
+}
+
+
+
+
+.pointer{
+    cursor: pointer;
+}
+
 
 @media screen and (orientation:portrait) {
     .header{
@@ -1027,5 +1104,16 @@ label{
         display: block;
         height: 60px;
         width: 60px;
+    }
+
+    .voirPlus img{
+        width: 80%;
+    }
+
+    .cross{
+        height: 30px;
+        width: 30px;
+        top: 10px;
+        right: 20px;
     }
 }
