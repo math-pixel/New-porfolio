@@ -62,44 +62,74 @@ list2.forEach((element, index) => {
 
 // ###################### auto change slected navigation ############  //! non faite car cest juste du graphisme
 //#region 
-// document.addEventListener("scroll", (event) => {
-//     let ElmTitreContaint = document.getElementById("TitreContaint");
-//     let ElmTitre = document.getElementById("Titre");
-//     let Elmlabs = document.getElementById("labs");
-//     let Elmwho = document.getElementById("who");
-//     let Elmcontact = document.getElementById("contact");
 
-//     let  arrayRect = [ElmTitreContaint,ElmTitre,Elmlabs,Elmwho,Elmcontact];
+let previousValue;
+document.addEventListener("scroll", (event) => {
+    let ElmTitreContaint = document.getElementById("TitreContaint");
+    let ElmTitre = document.getElementById("Titre");
+    let Elmlabs = document.getElementById("labs");
+    let Elmwho = document.getElementById("who");
+    let Elmcontact = document.getElementById("contact");
 
+    let  arrayRect = [ElmTitreContaint,ElmTitre,Elmlabs,Elmwho,Elmcontact];
 
-//     let actuelleSection;
-//     arrayRect.forEach((element, index) => {
+    // console.log(document.documentElement.scrollTop)
+    // console.log("boncing travaux :" , ElmTitre.getBoundingClientRect())
 
-//         if (index != arrayRect.length-1) {
-//             if (element.getBoundingClientRect().top <= 0) {
-                
-//                 list2.forEach((elm, index) => {
-//                     elm.children[0].classList.remove("animation_forward");
-//                     elm.children[0].children[0].classList.remove("animation_forward_img");
-//                 });
+    arrayRect.forEach((element,index) => {
 
-//                 list2.forEach((elm) => {
+        if (element.getBoundingClientRect().top < 100 && element.getBoundingClientRect().top > -50) {
+            if (element.id !== previousValue) {
+                previousValue = element.id
+                list2.forEach((e) => {
+                    // console.log(element.id)
+                    remove_class(e, "selected");
+
                     
-//                     if(elm.children[0].href.split("#")[1] === element.id){
-//                         elm.children[0].classList.add("animation_forward");
-//                         elm.children[0].children[0].classList.add("animation_forward_img");
-//                     }
-                    
-//                 })
+                    e.children[0].classList.remove("animation_forward");
+                    e.children[0].children[0].classList.remove("animation_forward_img");
+
+                    if (e.firstChild.href.split("#")[1] === element.id) {
+                        e.classList.add("selected");  
+                        e.children[0].classList.add("animation_forward");
+                        e.children[0].children[0].classList.add("animation_forward_img");
+                    }
+
+                }) 
+            } 
+        }
+
+    })
+
+
+    // let actuelleSection;
+    // arrayRect.forEach((element, index) => {
+
+    //     if (index != arrayRect.length-1) {
+    //         if (element.getBoundingClientRect().top <= 0) {
                 
-//             }
-//         }else{
+    //             list2.forEach((elm, index) => {
+    //                 elm.children[0].classList.remove("animation_forward");
+    //                 elm.children[0].children[0].classList.remove("animation_forward_img");
+    //             });
 
-//         }
-//     });
+    //             list2.forEach((elm) => {
+                    
+    //                 if(elm.children[0].href.split("#")[1] === element.id){
+    //                     elm.children[0].classList.add("animation_forward");
+    //                     elm.children[0].children[0].classList.add("animation_forward_img");
+    //                 }
+                    
+    //             })
+                
+    //         }
+    //     }else{
 
-//     // console.log("titre", ElmTitreContaint.top, "travaux", ElmTitre.top, "lab", Elmlabs.top, "who", Elmwho.top,"who Taille ", -Elmwho.height / 2  ,"contact", Elmcontact.top);
-// });
+    //     }
+    // });
+
+    // console.log("titre", ElmTitreContaint.top, "travaux", ElmTitre.top, "lab", Elmlabs.top, "who", Elmwho.top,"who Taille ", -Elmwho.height / 2  ,"contact", Elmcontact.top);
+});
 //#endregion
 
 
@@ -171,16 +201,16 @@ let contentVoirPlus = [
     {
         name:"Workshop",
         description:"Un premier Projet effectué en école qui consistait à travailler avec des graphistes. <br>L' Objectif étant de créer deux sites vitrines pour un festival avec la contrainte d' avoir une seule page HTML<br>Les deux sites devais avoir un style étrange qui sorte de l'ordinaire",
-        img1:"./images/paulWorkshop.PNG",
+        img1:"./images/paulWorkshop.png",
         titre1:"Site de Paul",
         paragraphe1:"Site realiser avec la colaboration de <a target=\"_blank\" href=\"https://readymag.com/u3810607477/4088804/\">Paul Figari</a> <br>Ici l'element principal est tourné vers l'oeuil en stopmotion et un theme un peu bleuatre avec des feuille.<br><a target=\"_blank\" href=\"https://math-pixel.github.io/workshop1/index.html?site=paul\">Lien du site</a>",
-        img2:"./images/jeremyWorkshop.PNG",
+        img2:"./images/jeremyWorkshop.png",
         titre2:"Site de Jeremy",
         paragraphe2:"Site realiser avec la colaboration de <a target=\"_blank\" href=\"https://readymag.com/u3995653634/4056188/\">Jeremy Berthey</a> <br>Ici l'element principal est tourné vers le robot en stopmotion et un theme un peu blanchatre avec un contraste elever avec le orange.<br><a target=\"_blank\" href=\"https://math-pixel.github.io/workshop1/index.html?site=jeremy\">Lien du site</a>"        
     },{
         name:"Jeux Video (WEB)",
         description:"Jeux Vidéo créé en HTML / CSS / JS, une direction artistique orientée illustration et un thème sur une taverne conviviale avec une ambiance sonore agréable<br>Le but : Retrouver la mascotte de la taverne qui se cache derrière ces fûts !",
-        img1:"./images/cache-cache.PNG",
+        img1:"./images/cache-cache.png",
         titre1:"Interface de jeu",
         paragraphe1:"Le jeu possede plusieur niveaux et selon le niveau le nombre de clics est limitée et la mascotte se déplace aléatoirement toute les 2 secondes<br><a target=\"_blank\" href=\"https://math-pixel.github.io/taverne_game-web-/\">Lien du jeu</a>",
         img2:"",

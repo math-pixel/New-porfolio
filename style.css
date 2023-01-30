@@ -103,6 +103,8 @@ hr{
     box-shadow: none;
 
     font-size: 4vw;
+
+    text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
 p{
@@ -885,16 +887,23 @@ label{
     display: none;
 }
 
+#titreVoirPlus{
+    margin: 5vh;
+    text-align: left;
+}
+
 .voirPlus img{
     height: auto;
     width: 40%;
 
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .voirPlus .description_voirPlus{
     margin: 5vh;
-    text-align: center;
+    text-align: justify;
+
+    max-width: 60%;
 }
 
 .voirPlus .left{
@@ -907,11 +916,11 @@ label{
 .voirPlus a{
     text-decoration: none;
 
-    color: #0872ec;
+    color: #cf276d; /* #0872ec */
 
     font-family: "typo2";
     font-size: 1.1vw;
-    text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000;
+    text-shadow: 1px 0 #000;
 }
 
 .cross{
