@@ -201,16 +201,16 @@ let contentVoirPlus = [
     {
         name:"Workshop",
         description:"Un premier Projet effectué en école qui consistait à travailler avec des graphistes. <br>L' Objectif étant de créer deux sites vitrines pour un festival avec la contrainte d' avoir une seule page HTML<br>Les deux sites devais avoir un style étrange qui sorte de l'ordinaire",
-        img1:"./images/paulWorkshop.png",
+        img1:"./images/paulWorkshop.PNG",
         titre1:"Site de Paul",
         paragraphe1:"Site realiser avec la colaboration de <a target=\"_blank\" href=\"https://readymag.com/u3810607477/4088804/\">Paul Figari</a> <br>Ici l'element principal est tourné vers l'oeuil en stopmotion et un theme un peu bleuatre avec des feuille.<br><a target=\"_blank\" href=\"https://math-pixel.github.io/workshop1/index.html?site=paul\">Lien du site</a>",
-        img2:"./images/jeremyWorkshop.png",
+        img2:"./images/jeremyWorkshop.PNG",
         titre2:"Site de Jeremy",
         paragraphe2:"Site realiser avec la colaboration de <a target=\"_blank\" href=\"https://readymag.com/u3995653634/4056188/\">Jeremy Berthey</a> <br>Ici l'element principal est tourné vers le robot en stopmotion et un theme un peu blanchatre avec un contraste elever avec le orange.<br><a target=\"_blank\" href=\"https://math-pixel.github.io/workshop1/index.html?site=jeremy\">Lien du site</a>"        
     },{
         name:"Jeux Video (WEB)",
         description:"Jeux Vidéo créé en HTML / CSS / JS, une direction artistique orientée illustration et un thème sur une taverne conviviale avec une ambiance sonore agréable<br>Le but : Retrouver la mascotte de la taverne qui se cache derrière ces fûts !",
-        img1:"./images/cache-cache.png",
+        img1:"./images/cache-cache.PNG",
         titre1:"Interface de jeu",
         paragraphe1:"Le jeu possede plusieur niveaux et selon le niveau le nombre de clics est limitée et la mascotte se déplace aléatoirement toute les 2 secondes<br><a target=\"_blank\" href=\"https://math-pixel.github.io/taverne_game-web-/\">Lien du jeu</a>",
         img2:"",
