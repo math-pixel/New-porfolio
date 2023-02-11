@@ -684,6 +684,8 @@ a:hover::before{
     text-align: center;
 
     line-height: 30px;
+    
+    text-align: left;
 }
 
 .whoIam a{
