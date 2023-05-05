@@ -240,7 +240,7 @@ let contentVoirPlus = [
         img1:"./images/Masarus-adventure-vignet.png",
         titre1:"",
         paragraphe1:"Voici le menu de démarrage du jeu",
-        img2:"./images/masaru.PNG",
+        img2:"./images/masaru.png",
         titre2:"",
         paragraphe2:"Sur cette image, nous sommes à l'intérieur du jeu en train de découvrir la carte."
     }
