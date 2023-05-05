@@ -234,6 +234,15 @@ let contentVoirPlus = [
         img2:"./images/recherche.PNG",
         titre2:"Fonction de recherche",
         paragraphe2:"Parmis toutes les options du site une grosse fonction présente est la possibilité de rechercher un film avec la bar de recherche ou avec un filtre pré définie"        
+    },{
+        name:"Masaru' s Adventure",
+        description:"Masaru' s Adventure est un jeu d'exploration/aventure en 2 dimensions votre but est simple il faut sauver l'île Kyushu en rassemblant les 3 cordes du shamisen Si vous souhaitez jouer à ce jeu, vous pouvez aller sur ce <a target=\"_blank\" href=\"https://yey-team.com/Masarus-Adventure/\">lien</a>",
+        img1:"./images/Masarus-adventure-vignet.png",
+        titre1:"",
+        paragraphe1:"Voici le menu de démarrage du jeu",
+        img2:"./images/masaru.PNG",
+        titre2:"",
+        paragraphe2:"Sur cette image, nous sommes à l'intérieur du jeu en train de découvrir la carte."
     }
 ]
 
